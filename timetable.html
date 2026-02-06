@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable | PowerFit</title>
+    <link rel="stylesheet" href="timetable.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h1 class="logo">Power<span>Fit</span></h1>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="features.html">Features</a>
+        <a href="timetable.html" class="active">Timetable</a>
+        <a href="contactus.html">Contact</a>
+    </div>
+</nav>
+
+<!-- TIMETABLE SECTION -->
+<section class="timetable-section">
+    <p class="subtitle">Class Timetable</p>
+    <h1>Working Hours and Class Time</h1>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="showTable('all')">All Classes</button>
+        <button class="tab-btn" onclick="showTable('cardio')">Cardio</button>
+        <button class="tab-btn" onclick="showTable('crossfit')">Crossfit</button>
+        <button class="tab-btn" onclick="showTable('powerlifting')">Powerlifting</button>
+    </div>
+
+    <!-- ALL CLASSES TABLE -->
+    <div id="table-all" class="table-wrapper active">
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="time">6.00am - 8.00am</td>
+                        <td><b>Cardio</b><br><span>John Deo</span></td>
+                        <td></td>
+                        <td><b>Crossfit</b><br><span>Adam Phillips</span></td>
+                        <td></td>
+                        <td><b>Power Lifting</b><br><span>James Alien</span></td>
+                        <td></td>
+                        <td><b>Cardio</b><br><span>John Deo</span></td>
+                    </tr>
+                    <tr>
+                        <td class="time">10.00am - 12.00am</td>
+                        <td></td>
+                        <td><b>Power Lifting</b><br><span>James Alien</span></td>
+                        <td></td>
+                        <td><b>Cardio</b><br><span>John Deo</span></td>
+                        <td></td>
+                        <td><b>Crossfit</b><br><span>Adam Phillips</span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time">5.00pm - 7.00pm</td>
+                        <td><b>Crossfit</b><br><span>Adam Phillips</span></td>
+                        <td></td>
+                        <td><b>Power Lifting</b><br><span>James Alien</span></td>
+                        <td></td>
+                        <td><b>Cardio</b><br><span>John Deo</span></td>
+                        <td></td>
+                        <td><b>Crossfit</b><br><span>Adam Phillips</span></td>
+                    </tr>
+                    <tr>
+                        <td class="time">7.00pm - 9.00pm</td>
+                        <td></td>
+                        <td><b>Cardio</b><br><span>John Deo</span></td>
+                        <td></td>
+                        <td><b>Crossfit</b><br><span>Adam Phillips</span></td>
+                        <td></td>
+                        <td><b>Power Lifting</b><br><span>James Alien</span></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- CARDIO TABLE -->
+    <div id="table-cardio" class="table-wrapper">
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="time">6.00am - 8.00am</td>
+                        <td class="highlight"><b>Cardio</b><br><span>John Deo</span></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="highlight"><b>Cardio</b><br><span>John Deo</span></td>
+                    </tr>
+                    <tr>
+                        <td class="time">10.00am - 12.00am</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="highlight"><b>Cardio</b><br><span>John Deo</span></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time">5.00pm - 7.00pm</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="highlight"><b>Cardio</b><br><span>John Deo</span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time">7.00pm - 9.00pm</td>
+                        <td></td>
+                        <td class="highlight"><b>Cardio</b><br><span>John Deo</span></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- CROSSFIT TABLE -->
+    <div id="table-crossfit" class="table-wrapper">
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="time">6.00am - 8.00am</td>
+                        <td></td>
+                        <td></td>
+                        <td class="highlight"><b>Crossfit</b><br><span>Adam Phillips</span></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time">10.00am - 12.00am</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="highlight"><b>Crossfit</b><br><span>Adam Phillips</span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time">5.00pm - 7.00pm</td>
+                        <td class="highlight"><b>Crossfit</b><br><span>Adam Phillips</span></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="highlight"><b>Crossfit</b><br><span>Adam Phillips</span></td>
+                    </tr>
+                    <tr>
+                        <td class="time">7.00pm - 9.00pm</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="highlight"><b>Crossfit</b><br><span>Adam Phillips</span></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- POWERLIFTING TABLE -->
+    <div id="table-powerlifting" class="table-wrapper">
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="time">6.00am - 8.00am</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="highlight"><b>Power Lifting</b><br><span>James Alien</span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time">10.00am - 12.00am</td>
+                        <td></td>
+                        <td class="highlight"><b>Power Lifting</b><br><span>James Alien</span></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time">5.00pm - 7.00pm</td>
+                        <td></td>
+                        <td></td>
+                        <td class="highlight"><b>Power Lifting</b><br><span>James Alien</span></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time">7.00pm - 9.00pm</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="highlight"><b>Power Lifting</b><br><span>James Alien</span></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 PowerFit Gym | Train Hard Stay Strong 💪</p>
+</footer>
+
+<script>
+function showTable(type){
+    // Hide all tables
+    document.querySelectorAll('.table-wrapper').forEach(wrapper => {
+        wrapper.classList.remove('active');
+    });
+    
+    // Remove active class from all buttons
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // Show selected table
+    document.getElementById('table-' + type).classList.add('active');
+    
+    // Add active class to clicked button
+    event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>
