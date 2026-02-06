@@ -1,0 +1,201 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#111;
+    color:#fff;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* NAVBAR */
+nav{
+    background:black;
+    padding:15px 100px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    color:#fff;
+}
+
+.logo span{
+    color:#f44336;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    transition:0.3s;
+    padding:5px 10px;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color:#f44336;
+    border-bottom:2px solid #f44336;
+}
+
+/* TRAINER SECTION */
+.trainer-section{
+    padding:70px 20px;
+    text-align:center;
+    flex:1;
+    animation:fadeUp 1s;
+}
+
+.trainer-section h2{
+    font-size:42px;
+    margin-bottom:10px;
+    color:#fff;
+}
+
+.subtitle{
+    color:#ccc;
+    margin-bottom:50px;
+    font-size:18px;
+}
+
+.trainer-box{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.trainer-card{
+    width:320px;
+    background:#1d1d1d;
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.4s;
+    border:2px solid transparent;
+}
+
+.trainer-card:hover{
+    transform:scale(1.05) translateY(-10px);
+    box-shadow:0 15px 40px rgba(244,67,54,0.4);
+    border-color:#f44336;
+}
+
+.trainer-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    display:block;
+}
+
+.trainer-info{
+    padding:20px;
+}
+
+.trainer-info h3{
+    font-size:24px;
+    margin-bottom:8px;
+    color:#fff;
+}
+
+.trainer-info .specialty{
+    color:#f44336;
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+.trainer-info .description{
+    color:#aaa;
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:15px;
+}
+
+.social-links a{
+    color:#fff;
+    font-size:20px;
+    transition:0.3s;
+    width:35px;
+    height:35px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#333;
+}
+
+.social-links a:hover{
+    background:#f44336;
+    transform:scale(1.2);
+}
+
+/* FOOTER */
+footer{
+    background:#000;
+    text-align:center;
+    padding:20px;
+    margin-top:auto;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    nav{
+        flex-direction:column;
+        padding:15px 20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        margin-top:15px;
+    }
+
+    .trainer-section{
+        padding:50px 15px;
+    }
+
+    .trainer-section h2{
+        font-size:32px;
+    }
+
+    .trainer-box{
+        gap:25px;
+    }
+
+    .trainer-card{
+        width:100%;
+        max-width:350px;
+    }
+}
