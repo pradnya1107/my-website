@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerFit Gym</title>
+    <link rel="stylesheet" href="gym.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <h1 class="logo">Power<span>Fit</span></h1>
+    
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav id="nav-menu">
+        <a href="gym.html">Home</a>
+        <a href="about.html">About</a>
+        
+        <a href="features.html">Features</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="contactus.html">Contact</a>
+        
+        <a href="login.html" class="btn">Login</a>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Build Your <span>Perfect Body</span></h2>
+        <p>No Pain • No Gain • Only Results</p>
+        <button onclick="location.href='admission.html'">Join Now</button>
+    </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="programs">
+    <h2 class="section-title">Our Programs</h2>
+
+    <div class="program-box">
+        <div class="card" onclick="location.href='weight-training.html'">
+            <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1" alt="Weight Training">
+            <h3>Weight Training</h3>
+            <p>Build muscle and strength</p>
+        </div>
+
+        <div class="card" onclick="location.href='cardio.html'">
+            <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=400" alt="Cardio">
+            <h3>Cardio</h3>
+            <p>Boost stamina and endurance</p>
+        </div>
+
+        <div class="card" onclick="location.href='yoga.html'">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400" alt="Yoga">
+            <h3>Yoga</h3>
+            <p>Flexibility and inner peace</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 PowerFit Gym | Designed With Our Team❤️</p>
+</footer>
+
+<script>
+function toggleMenu(){
+    const nav = document.getElementById('nav-menu');
+    nav.classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
+

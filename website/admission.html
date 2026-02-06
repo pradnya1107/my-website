@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gym Admission | PowerFit</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="admission.css">
+</head>
+<body>
+
+<div class="form-container">
+<h2>Gym Admission Form</h2>
+
+<form id="admissionForm">
+
+<input type="text" placeholder="Full Name" required>
+<input type="number" placeholder="Age" required>
+<input type="tel" placeholder="Mobile Number" required>
+
+<!-- Weight & Height -->
+<input type="number" placeholder="Weight (kg)" required>
+<input type="number" placeholder="Height (cm)" required>
+
+<!-- Preferred Time -->
+<select required>
+<option value="">Preferred Time</option>
+<option>Morning</option>
+<option>Evening</option>
+<option>Both</option>
+</select>
+
+<!-- Fitness Goal -->
+<select required>
+<option value="">Fitness Goal</option>
+<option>Weight Loss</option>
+<option>Muscle Gain</option>
+<option>General Fitness</option>
+</select>
+
+<!-- Health Issue -->
+<select id="health">
+<option value="">Any Health Issue?</option>
+<option value="no">No</option>
+<option value="yes">Yes</option>
+</select>
+
+<textarea id="healthText" placeholder="Mention health issue"
+style="display:none;"></textarea>
+
+<!-- Membership -->
+<select id="plan" required>
+<option value="">Membership Plan</option>
+<option value="1000">Monthly – ₹1000</option>
+<option value="2500">Quarterly – ₹2500</option>
+<option value="9000">Yearly – ₹9000</option>
+</select>
+
+<select id="program" required>
+<option value="">Program</option>
+<option value="500">Weight Training (+₹500)</option>
+<option value="300">Cardio (+₹300)</option>
+<option value="400">Yoga (+₹400)</option>
+</select>
+
+<div class="amount">
+Total Amount: ₹<span id="total">0</span>
+</div>
+
+<!-- Rules -->
+<label class="checkbox">
+<input type="checkbox" required>
+I agree to Gym Rules & Conditions
+</label>
+
+<button type="submit">Pay Now</button>
+
+</form>
+</div>
+
+<script>
+const plan = document.getElementById("plan");
+const program = document.getElementById("program");
+const total = document.getElementById("total");
+const health = document.getElementById("health");
+const healthText = document.getElementById("healthText");
+
+function calculateTotal(){
+total.innerText = Number(plan.value) + Number(program.value);
+}
+plan.addEventListener("change", calculateTotal);
+program.addEventListener("change", calculateTotal);
+
+health.addEventListener("change", ()=>{
+healthText.style.display = health.value === "yes" ? "block" : "none";
+});
+
+document.getElementById("admissionForm").addEventListener("submit", function(e){
+e.preventDefault();
+window.location.href = "payment.html";
+});
+</script>
+
+</body>
+</html>
